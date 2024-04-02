@@ -22,14 +22,16 @@ const NavBar = () => {
     },
   ];
   return (
-    <nav>
-      <h1 className=" text-2xl">Eduardo 👨🏻‍💻</h1>
-      <div>
+    <nav className=" flex justify-between py-10 items-center">
+      <h1 className=" text-2xl font-bold underline underline-offset-8  decoration-green-500 -rotate-2">
+        Eduardo 👨🏻‍💻
+      </h1>
+      <div className=" flex gap-5">
         {socials.map((media) => {
           const Icon = media.Icon;
           return (
             <a key={media.label} href={media.link} label={media.label}>
-              <Icon />
+              <Icon className=" w-6 h-6 hover:scale-125 transition" />
             </a>
           );
         })}
